@@ -149,3 +149,7 @@ recipes.remove(<enderio:item_advanced_item_filter>);
 recipes.addShapeless(<enderio:item_advanced_item_filter>,
     [<enderio:item_basic_item_filter>, <ore:circuitGood>]
 );
+
+// Remove clay hand mortaring
+recipes.removeByRecipeName("gregtech:clay_block_to_dust");
+recipes.removeByRecipeName("gregtech:clay_ball_to_dust");
