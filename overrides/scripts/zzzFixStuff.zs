@@ -104,15 +104,15 @@ val coppers = [<metaitem:ingotAnnealedCopper>, <metaitem:dustAnnealedCopper>, <m
 for copper in coppers {
     blast_furnace.recipeBuilder()
         .inputs(copper, <minecraft:redstone>)
-        .outputs(<metaitem:ingotRedAlloy> * 2)
+        .outputs(<metaitem:ingotRedAlloy>)
         .property("temperature", 1200)
-        .duration(880).EUt(30).buildAndRegister();
+        .duration(880).EUt(120).buildAndRegister();
 
     alloy.findRecipe(16, [<minecraft:redstone> * 4, copper], [null]).remove();
     alloy.recipeBuilder()
-        .inputs(<minecraft:redstone> * 2, copper)
+        .inputs(<minecraft:redstone> * 4, copper)
         .outputs(<metaitem:ingotRedAlloy>)
-        .duration(100).EUt(16).buildAndRegister();
+        .duration(400).EUt(16).buildAndRegister();
 }
 
 blast_furnace.findRecipe(120, [<minecraft:redstone>, <metaitem:ingotCopper>], [null]).remove();
