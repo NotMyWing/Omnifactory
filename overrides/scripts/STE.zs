@@ -143,3 +143,9 @@ recipes.addShapeless(
 
 // Disable osmium smelting
 furnace.remove(<gregtech:meta_item_1:10047>);
+
+// Replace the stinky advanced filter recipe
+recipes.remove(<enderio:item_advanced_item_filter>);
+recipes.addShapeless(<enderio:item_advanced_item_filter>,
+    [<enderio:item_basic_item_filter>, <ore:circuitGood>]
+);
