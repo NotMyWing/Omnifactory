@@ -103,6 +103,14 @@ fluidextractor.recipeBuilder()
 // Lava Centrifungus
 centrifuge.findRecipe(80, [null], [<liquid:lava> * 100]).remove();
 
+// Biotitus
+electrolyzer.findRecipe(30, [<ore:dustGraniteBlack>.firstItem * 5], [null]).remove();
+electrolyzer.recipeBuilder()
+    .inputs(<ore:dustGraniteBlack> * 5)
+    .outputs([<ore:dustSiliconDioxide>.firstItem * 4, <ore:dustDarkAsh>.firstItem])
+    .fluidOutputs(<liquid:fluorine> * 40)
+    .duration(400).EUt(30).buildAndRegister();
+
 // Rubber Plate
 hammer.recipeBuilder()
     .inputs(<gregtech:meta_item_1:32627> * 6)
