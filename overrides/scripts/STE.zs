@@ -127,7 +127,13 @@ compressor.recipeBuilder()
 hammer.recipeBuilder()
     .inputs([<ore:dustFireclay> * 3])
     .outputs(<gregtech:meta_item_2:32014> * 2)
-    .duration(200).EUt(8).buildAndRegister();
+    .duration(300).EUt(8).buildAndRegister();
+
+compressor.findRecipe(2, [<ore:dustFireclay>.firstItem], [null]).remove();
+compressor.recipeBuilder()
+    .inputs(<ore:dustFireclay>)
+    .outputs(<gregtech:meta_item_2:32014>)
+    .duration(300).EUt(8).buildAndRegister();
 
 // Airtight Seal
 <ore:spaceSuit>.add(<advancedrocketry:spacehelmet>);
