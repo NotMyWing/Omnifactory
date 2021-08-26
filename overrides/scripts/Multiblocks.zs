@@ -1390,6 +1390,139 @@ val actualization_matrix = Builder.start(loc, id)
                         .build())
     .buildAndRegister() as Multiblock;
 
+id += 1;
+loc = "advanced_diesel_engine";
+
+val advanced_diesel_engine = Builder.start(loc, id)
+    .withPattern(
+        FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
+            .aisle(
+                "       ",
+                "       ",
+                "  ~~~  ",
+                "  ~ ~  ",
+                "  ~~~  ",
+                "       ",
+                "       ")
+            .aisle(
+                "       ",
+                "  C C  ",
+                " CIIIC ",
+                " FISIF ",
+                " CIIIC ",
+                "  C C  ",
+                "       ")
+            .aisle(
+                "       ",
+                " CCCCC ",
+                " CGFGC ",
+                " CFGFC ",
+                " CGFGC ",
+                " CCCCC ",
+                "       ")
+            .aisle(
+                "       ",
+                "  CRC  ",
+                " CGFGC ",
+                " HFGFX~",
+                " CGFGC ",
+                "  CCC  ",
+                "       ")
+            .aisle(
+                "       ",
+                "  CRC  ",
+                " CGFGC ",
+                " HFGFX~",
+                " CGFGC ",
+                "  CCC  ",
+                "       ")
+            .aisle(
+                "       ",
+                "  CRC  ",
+                " CGFGC ",
+                " HFGFX~",
+                " CGFGC ",
+                "  CCC  ",
+                "       ")
+            .aisle(
+                "       ",
+                " CCCCC ",
+                " CGFGC ",
+                " CFGFC ",
+                " CGFGC ",
+                " CCCCC ",
+                "       ")
+            .aisle(
+                "       ",
+                "  C C  ",
+                " CCFCC ",
+                " FF@FF ",
+                " CCFCC ",
+                "  C C  ",
+                "       ")
+            .where(' ', IBlockMatcher.ANY)
+            .where('~', IBlockMatcher.AIR)
+            .where('C', <metastate:gregtech:metal_casing:6>)
+            .where('F', <gregtech:frame_titanium>)
+            .where('G', <metastate:gregtech:turbine_casing:2>)
+            .where('I', <metastate:gregtech:multiblock_casing:0>)
+            .where('S', IBlockMatcher.controller(loc))
+            .where('X', <metastate:chisel:technical:4>)
+            .where('R', <gtadditions:ga_transparent_casing>)
+            .where('@', IBlockMatcher.abilityPartPredicate(MultiblockAbility.OUTPUT_ENERGY))
+            .where('H', IBlockMatcher.abilityPartPredicate(MultiblockAbility.IMPORT_FLUIDS))
+            .build())
+    .addDesign(
+        FactoryMultiblockShapeInfo.start()
+            .aisle(
+                " C   C ",
+                "CCCCCCC",
+                "FCHHHCF",
+                "CCCCCCC",
+                " C   C ")
+            .aisle(
+                "CCCCCCC",
+                "IGGGGGC",
+                "IFFFFFF",
+                "IGGGGGC",
+                "CCCCCCC")
+            .aisle(
+                " CCCCC ",
+                "IFFFFFF",
+                "SGGGGG@",
+                "IFFFFFF",
+                " CRRRC ")
+            .aisle(
+                "CCCCCCC",
+                "IGGGGGC",
+                "IFFFFFF",
+                "IGGGGGC",
+                "CCCCCCC")
+            .aisle(
+                " C   C ",
+                "CCCCCCC",
+                "FCXXXCF",
+                "CCCCCCC",
+                " C   C ")
+            .where(' ', IBlockInfo.EMPTY)
+            .where('S', IBlockInfo.controller(loc))
+            .where('C', <metastate:gregtech:metal_casing:6>)
+            .where('F', <gregtech:frame_titanium>)
+            .where('G', <metastate:gregtech:turbine_casing:2>)
+            .where('I', <metastate:gregtech:multiblock_casing:0>)
+            .where('X', <metastate:chisel:technical:4>)
+            .where('R', <gtadditions:ga_transparent_casing>)
+            .where('@', MetaTileEntities.ENERGY_OUTPUT_HATCH[5], IFacing.east())
+            .where('H', MetaTileEntities.FLUID_IMPORT_HATCH[1], IFacing.north())
+            .build())
+    .withRecipeMap(
+        FactoryRecipeMap.start(loc)
+                        .minFluidInputs(3)
+                        .maxFluidInputs(3)
+                        .build())
+    .withZoom(0.7f)
+    .buildAndRegister() as Multiblock;
+
 ///////////////////////////////////////////////
 ////////////   Crafting Recipes   /////////////
 ///////////////////////////////////////////////
@@ -2667,4 +2800,28 @@ reinforced_coke_oven.recipeMap
     .inputs(<ore:coal>)
     .outputs(<ore:gemCoke>.firstItem)
     .fluidOutputs(<liquid:creosote> * 800)
+    .buildAndRegister();
+
+// Advanced Engine
+makeShaped("advanced_diesel_engine", <gregtech:machine:3011>,
+    ["TPT",
+     "CDC",
+     "TPT"],
+    { T : <ore:plateDenseTitanium>,
+      P : <metaitem:electric.pump.iv>,
+      D : <gregtech:machine:517>, // Lesser Diesel
+      C : <ore:circuitMaster>});
+
+advanced_diesel_engine.recipeMap
+    .recipeBuilder()
+    .duration(12)
+    .EUt(-30720)
+    .fluidInputs([<liquid:fuel> * 448, <liquid:lubricant> * 48, <liquid:oxygen> * 240])
+    .buildAndRegister();
+
+advanced_diesel_engine.recipeMap
+    .recipeBuilder()
+    .duration(40)
+    .EUt(-30720)
+    .fluidInputs([<liquid:nitro_fuel> * 896, <liquid:lubricant> * 48, <liquid:oxygen> * 480])
     .buildAndRegister();
