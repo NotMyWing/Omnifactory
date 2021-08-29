@@ -1852,7 +1852,6 @@ small_microverse.recipeMap
     .outputs(<gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_niobium_0:1> * 64,
-             <gregtech:ore_copper_0:1> * 64,
              <gregtech:ore_sphalerite_0:1> * 64,
              <gregtech:ore_sphalerite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
@@ -1863,7 +1862,8 @@ small_microverse.recipeMap
              <gregtech:ore_tungstate_0:1> * 64,
              <contenttweaker:radiumsalt> * 64,
              <contenttweaker:radiumsalt> * 64,
-             <gregtech:ore_cassiterite_0:1> * 64)
+             <gregtech:ore_cassiterite_0:1> * 64,
+             <densemetals:dense_copper_ore> * 16)
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -1875,9 +1875,8 @@ actualization_matrix.recipeMap
     .outputs(<gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_niobium_0:1> * 64,
-             <gregtech:ore_copper_0:1> * 64,
-             <gregtech:ore_copper_0:1> * 64,
-             <gregtech:ore_copper_0:1> * 64,
+             <gregtech:ore_sphalerite_0:1> * 64,
+             <gregtech:ore_sphalerite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
@@ -1886,7 +1885,8 @@ actualization_matrix.recipeMap
              <gregtech:ore_tungstate_0:1> * 64,
              <contenttweaker:radiumsalt> * 64,
              <contenttweaker:radiumsalt> * 64,
-             <gregtech:ore_cassiterite_0:1> * 64)
+             <gregtech:ore_cassiterite_0:1> * 64,
+             <densemetals:dense_copper_ore> * 16)
     .buildAndRegister();
 
 // Tier 2 Titanium Microminer - Mission 2: Stellar Creation Data
