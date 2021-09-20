@@ -2149,15 +2149,15 @@ medium_microverse.recipeMap
             <contenttweaker:quantumflux> * 8,
             <thermalfoundation:material:1026> * 64,
             <ore:treeSapling>)
-    .outputs(<minecraft:skull> * 32,
+    .outputs(<minecraft:skull> * 48,
              <minecraft:bone> * 64,
              <minecraft:bone> * 64,
              <minecraft:bone> * 64,
-             <minecraft:skull:2> * 32,
+             <minecraft:skull:2> * 48,
              <minecraft:rotten_flesh> * 64,
              <minecraft:rotten_flesh> * 64,
              <minecraft:rotten_flesh> * 64,
-             <minecraft:skull:4> * 32,
+             <minecraft:skull:4> * 48,
              <minecraft:gunpowder> * 64,
              <minecraft:slime> * 64,
              <armorplus:material:1> * 64)
@@ -2169,15 +2169,15 @@ actualization_matrix.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
     .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
-    .outputs(<minecraft:skull> * 32,
+    .outputs(<minecraft:skull> * 48,
              <minecraft:bone> * 64,
              <minecraft:bone> * 64,
              <minecraft:bone> * 64,
-             <minecraft:skull:2> * 32,
+             <minecraft:skull:2> * 48,
              <minecraft:rotten_flesh> * 64,
              <minecraft:rotten_flesh> * 64,
              <minecraft:rotten_flesh> * 64,
-             <minecraft:skull:4> * 32,
+             <minecraft:skull:4> * 48,
              <minecraft:gunpowder> * 64,
              <minecraft:slime> * 64,
              <armorplus:material:1> * 64)
@@ -2195,7 +2195,7 @@ medium_microverse.recipeMap
     .outputs(<minecraft:blaze_rod> * 64,
              <minecraft:blaze_rod> * 64,
              <minecraft:ghast_tear> * 64,
-             <minecraft:skull:1>* 32,
+             <minecraft:skull:1>* 48,
              <armorplus:material:2> * 64,
              <armorplus:material:2> * 64,
              <minecraft:magma_cream> * 64,
@@ -2211,7 +2211,7 @@ actualization_matrix.recipeMap
     .outputs(<minecraft:blaze_rod> * 64,
              <minecraft:blaze_rod> * 64,
              <minecraft:ghast_tear> * 64,
-             <minecraft:skull:1>* 32,
+             <minecraft:skull:1>* 48,
              <armorplus:material:2> * 64,
              <armorplus:material:2> * 64,
              <minecraft:magma_cream> * 64,
@@ -2227,7 +2227,7 @@ medium_microverse.recipeMap
             <contenttweaker:quantumflux> * 8,
             <thermalfoundation:material:1026> * 64,
             <minecraft:end_stone>)
-    .outputs(<enderio:block_enderman_skull> * 32,
+    .outputs(<enderio:block_enderman_skull> * 48,
              <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
@@ -2240,7 +2240,7 @@ actualization_matrix.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
     .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
-    .outputs(<enderio:block_enderman_skull> * 32,
+    .outputs(<enderio:block_enderman_skull> * 48,
              <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
@@ -2287,7 +2287,7 @@ medium_microverse.recipeMap
             <armorplus:material:2> * 64)
     .outputs(<contenttweaker:witherrealmdata> * 64,
              <contenttweaker:witherrealmdata> * 64,
-             <extendedcrafting:storage:2> * 64)
+             <extendedcrafting:storage:2> * 48)
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -2298,7 +2298,7 @@ actualization_matrix.recipeMap
     .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 5}))
     .outputs(<contenttweaker:witherrealmdata> * 64,
              <contenttweaker:witherrealmdata> * 64,
-             <extendedcrafting:storage:2> * 64)
+             <extendedcrafting:storage:2> * 48)
     .buildAndRegister();
 
 // Tier 4.5 Lumium Microminer: Mission 6 - Stabilized Matter
