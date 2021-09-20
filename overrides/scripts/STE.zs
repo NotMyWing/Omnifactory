@@ -108,7 +108,7 @@ electrolyzer.findRecipe(30, [<ore:dustGraniteBlack>.firstItem * 5], [null]).remo
 electrolyzer.recipeBuilder()
     .inputs(<ore:dustGraniteBlack> * 5)
     .outputs([<ore:dustSiliconDioxide>.firstItem * 4, <ore:dustDarkAsh>.firstItem])
-    .fluidOutputs(<liquid:fluorine> * 40)
+    .fluidOutputs(<liquid:fluorine> * 100)
     .duration(400).EUt(30).buildAndRegister();
 
 // Rubber Plate
