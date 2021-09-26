@@ -2381,7 +2381,7 @@ actualization_matrix.recipeMap
     .buildAndRegister();
 
 // Tier 5 Iridium Microminer: Mission 4 - Stabilized Matter
-small_microverse.recipeMap
+medium_microverse.recipeMap
     .recipeBuilder()
     .duration(9408)
     .EUt(30720)
@@ -2515,20 +2515,14 @@ actualization_matrix.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
     .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
-    .outputs(<draconicevolution:dragon_heart> * 32,
-             <minecraft:dragon_egg> * 64,
-             <minecraft:dragon_egg> * 64,
+    .outputs(<draconicevolution:dragon_heart> * 4,
+             <minecraft:dragon_egg> * 8,
              <minecraft:dragon_breath> * 64,
              <armorplus:material:3> * 64,
              <armorplus:material:3> * 64,
              <armorplus:material:3> * 64,
              <minecraft:gold_block> * 64,
-             <minecraft:gold_block> * 64,
-             <minecraft:gold_block> * 64,
-             <minecraft:gold_block> * 64,
              <gregtech:meta_block_compressed_3:14> * 64, //Silver block
-             <gregtech:meta_block_compressed_3:14> * 64, //Silver Block
-             <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
              <gregtech:meta_block_compressed_3:3> * 64) //Platinum Block
     .buildAndRegister();
