@@ -969,10 +969,6 @@ implosion.recipeBuilder()
 RecipeMap.chanceFunction = function(chance as int,
 									boostPerTier as int,
 									tier as int) as int {
-	if boostPerTier == 0 {
-	    // Simulation Chamber recipes, for example, which should not scale
-	    return chance;
-	}
 	return chance * pow(2, tier);
 };
 
