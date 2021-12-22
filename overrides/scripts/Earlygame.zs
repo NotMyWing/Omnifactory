@@ -895,15 +895,6 @@ makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate:
 	  R : <ore:dustRedstone>,
 	  I : <ore:ingotIron>});
 
-// LittleTiles Hammer
-recipes.removeByRecipeName("littletiles:hammer");
-makeShaped("lt_hammer", <littletiles:hammer>,
-	["III",
-	 " R ",
-	 " R "],
-	{ R : <ore:stickDraconium>,
-	  I : <ore:ingotIron>});
-
 //Add recipe for Iron Trapdoor
 assembler.recipeBuilder()
 	.inputs(<gregtech:meta_item_1:12033> * 4)
